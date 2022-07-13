@@ -2,3 +2,35 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .tab::before {
+        content: "";
+        border-bottom-right-radius: 50%;
+        left: -8px;
+        box-shadow: 4px 0 0 0 theme(colors.brand-secondary);
+        position: absolute;
+        bottom: 0px;
+        width: 8px;
+        height: 8px;
+    }
+
+    .tab::after{
+        content: "";
+        border-bottom-left-radius: 50%;
+        right: -8px;
+        box-shadow: -4px 0 0 0 theme(colors.brand-secondary);
+        position: absolute;
+        bottom: 0px;
+        width: 8px;
+        height: 8px;
+    }
+
+    .tab--selected::before {
+        box-shadow: 4px 0 0 0 theme(colors.brand-primary);
+    }
+
+    .tab--selected::after{
+        box-shadow: -4px 0 0 0 theme(colors.brand-primary);
+    }
+}
