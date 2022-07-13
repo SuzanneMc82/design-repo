@@ -31,6 +31,7 @@ module.exports = {
       "white": "#ffffff",
     },
     fontFamily: {
+      base: ["18px", "1.5"],
       sans: ["Roboto", "sans-serif"],
     },
     fontSize: {
