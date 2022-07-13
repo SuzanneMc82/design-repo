@@ -1,4 +1,7 @@
 /** @type {import('tailwindcss').Config} */
+
+const plugin = require('tailwindcss/plugin')
+
 module.exports = {
   content: ["./src/**/*.{html,ts}"],
   theme: {
@@ -28,6 +31,7 @@ module.exports = {
       "white": "#ffffff",
     },
     fontFamily: {
+      base: ["18px", "1.5"],
       sans: ["Roboto", "sans-serif"],
     },
     fontSize: {
@@ -40,5 +44,9 @@ module.exports = {
     },  
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    plugin(function({ addVariant }) {
+      addVariant('hocus', ['&:hover', '&:focus'])
+    })
+  ],
 };
