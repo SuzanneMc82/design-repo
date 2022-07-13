@@ -9,6 +9,7 @@ import { ButtonListComponent } from './button-list/button-list.component';
 import { InfoListComponent } from './info-list/info-list.component';
 import { CardComponent } from './card/card.component';
 import { InfoPanelComponent } from './info-panel/info-panel.component';
+import { ContainerComponent } from './container/container.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { InfoPanelComponent } from './info-panel/info-panel.component';
     ButtonListComponent,
     InfoListComponent,
     CardComponent,
-    InfoPanelComponent
+    InfoPanelComponent,
+    ContainerComponent
   ],
   imports: [
     BrowserModule
